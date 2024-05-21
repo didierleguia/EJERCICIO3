@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo2</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="contenedor">
+        <h3>3.	Una frutería ofrece las manzanas con descuento 
+             </h3>
+        <div id="resultado">
+            <script>
+
+                //1. Declaracion de variables//
+               var kilos,preciokilo,descuento,costo,costocond;
+            
+                //2. Fase entrada/lectura de datos//
+                kilos=(parseInt(prompt("INGRESAR KILOS DE MANZANA QUE DESEACOMPRAR")))
+                preciokilo=5
+
+                //3. Fase del procesamiento de datos//
+                if (kilos <= 2) {
+                    descuento = 0;
+                } else {
+                    if (kilos <= 5) {
+                        descuento = 0.10;
+                    } else {
+                        if (kilos <= 10) {
+                            descuento = 0.15;
+                        } else {
+                            descuento = 0.20;
+                        }
+                    }
+                }
+                
+                costo=kilos * preciokilo;
+                costocond= costo * (1 - descuento);
+                
+                //fase final//
+                document.write("=========Manzanas con descuento======"+"<br>");
+                document.write("Kilos de manzanas comprados:"+  kilos+"<br>");
+                document.write("El costo total de las manzanas es:"+  costocond+"<br>");
+                document.write("el precio de la manzana por kilo es:"+  preciokilo+"<br>");
+                document.write("El descuento es de:"  +  descuento +"<br>");
+                
+
+                
+            
+               
+               
+                
+
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>
